@@ -4,7 +4,6 @@ const caesar = function(string, jumps) {
   const offsets = [65, 97]
   for (start in offsets) {
     let val = offsets[start]
-    console.log(offsets[start])
     charCodes = charCodes.map(code => ((code >= val) && (code <= val+25)) ? (code+jumps-val+26)%26 + val : code)
   }
   const newChars = charCodes.map(code => String.fromCharCode(code))
